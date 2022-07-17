@@ -14,7 +14,7 @@ const config = {
     entry: './src/App.tsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        publicPath: '/Intellectual_Game---Five-Words/',
+        publicPath: '/Intellectual_Game---Five-Words',
         filename: 'main.js'
     },
     devServer: {
