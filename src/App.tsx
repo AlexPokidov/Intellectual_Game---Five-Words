@@ -224,7 +224,7 @@ function App() {
     <BrowserRouter>
       <Provider store={store}>
         <Routes>
-          <Route path='/Intellectual_Game---Five-Words' element={
+          <Route path='/' element={
             <div>
             <Header />
             <div className={styles.containerMain}>
@@ -232,8 +232,8 @@ function App() {
             </div>
           </div>
           }>
-            <Route path='/Intellectual_Game---Five-Words' element={<Start />}/>
-            <Route path='/Intellectual_Game---Five-Words/game' element={<GameSpace />}/>
+            <Route path='/' element={<Start />}/>
+            <Route path='/game' element={<GameSpace />}/>
             <Route path='*' element={<div>
               Страница не найдена
             </div>} />

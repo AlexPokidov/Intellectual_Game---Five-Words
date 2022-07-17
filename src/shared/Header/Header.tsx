@@ -63,7 +63,7 @@ export function Header() {
       <h1 className={styles.title}>FW</h1>
 
       <Routes>
-        <Route path='/Intellectual_Game---Five-Words/game' element={
+        <Route path='/game' element={
           <div className={styles.containerBtn}>
             {
               width > 800 &&
