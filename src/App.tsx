@@ -232,8 +232,8 @@ function App() {
             </div>
           </div>
           }>
-            <Route path='/' element={<Start />}/>
-            <Route path='/game' element={<GameSpace />}/>
+            <Route path='/Intellectual_Game---Five-Words/' element={<Start />}/>
+            <Route path='/Intellectual_Game---Five-Words/game' element={<GameSpace />}/>
             <Route path='*' element={<div>
               Страница не найдена
             </div>} />
