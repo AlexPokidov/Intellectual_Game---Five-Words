@@ -1,0 +1,159 @@
+:root {
+  --width-modal: 800px;
+  --position-top: 17%;
+}
+
+.modalFaq {
+  position: absolute;
+  top: var(--position-top);
+  left: calc(50% - (var(--width-modal) / 2)) ;
+  width: var(--width-modal);
+  max-height: calc(95vh - var(--position-top));
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.btnClose {
+  position: absolute;
+  padding: 2px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.content {
+  position: relative;
+  height: 400px;
+  overflow: auto;
+}
+
+.modalFaq h1 {
+  margin-bottom: 5px;
+  color: var(--primary-color-gold);
+}
+
+.modalFaq h2 {
+  margin-bottom: 5px;
+  color: var(--primary-color-gold);
+}
+
+.modalFaq h3 {
+  margin-bottom: 5px;
+  color: var(--primary-color-gold);
+}
+
+.modalFaq  li {
+  margin-bottom: 7px;
+  text-align: left !important;
+}
+
+.modalFaq  ul {
+  margin-bottom: 15px;
+  padding-left: 20px;
+  text-align: left !important;
+}
+
+.listTop {
+  list-style: circle !important;
+}
+
+.bonusList {
+  list-style: none;
+}
+
+.bonusList li {
+  margin-bottom: 10px;
+}
+
+.bonusList div {
+  display: flex;
+}
+
+.dev {
+  color: var(--primary-color-gold);
+}
+
+@media (max-width: 1200px) {
+  .modalFaq {
+    font-size: 18px;
+  }
+  .modalFaq h1 {
+    font-size: 36px;
+  }
+
+  .modalFaq h2 {
+    font-size: 30px;
+  }
+
+  .modalFaq h3 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 800px) {
+  :root {
+    --width-modal: 580px;
+    --position-top: 15%;
+  }
+
+  .modalFaq {
+    font-size: 16px;
+  }
+
+  .modalFaq h1 {
+    font-size: 28px;
+  }
+
+  .modalFaq h2 {
+    font-size: 24px;
+  }
+
+  .modalFaq h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --width-modal: 400px;
+    --position-top: 15%;
+  }
+  .modalFaq h1 {
+    font-size: 24px;
+  }
+
+  .modalFaq h2 {
+    font-size: 20px;
+  }
+
+  .modalFaq h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    --width-modal: 100%;
+    --position-top: 15%;
+  }
+  .modalFaq h1 {
+    font-size: 24px;
+  }
+
+  .modalFaq h2 {
+    font-size: 20px;
+  }
+
+  .modalFaq h3 {
+    font-size: 18px;
+  }
+}
+

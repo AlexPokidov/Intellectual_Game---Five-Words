@@ -1,0 +1,47 @@
+.keyboard {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.line {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.left {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 30%;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.right {
+  position: absolute;
+  top: 60%;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 30%;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 600px) {
+  .keyboard {
+    bottom: -2%;
+  }
+}

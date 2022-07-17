@@ -1,0 +1,54 @@
+:root {
+  --width-modal: 600px;
+}
+
+.modal {
+  position: absolute;
+  top: 17%;
+  left: calc(50% - (var(--width-modal) / 2)) ;
+  width: var(--width-modal);
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.title {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 28px;
+  color: var(--primary-color-gold);
+}
+
+.textStat {
+  margin-bottom: 10px;
+}
+
+.btnReset {
+  padding: 5px 10px;
+  font-style: 18px;
+  font-weight: bold;
+  color: #000;
+  border-radius: 10px;
+  background-color: var(--primary-color-gold);
+  cursor: pointer;
+}
+
+.btnClose {
+  position: absolute;
+  padding: 2px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.btnClose svg {
+  width: 15px;
+  height: 15px;
+}

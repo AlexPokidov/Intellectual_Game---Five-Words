@@ -1,0 +1,56 @@
+.btn {
+  width: 40px;
+  height: 50px;
+  padding: 3px 5px;
+  margin: 3px 5px;
+  border-radius: 8px;
+  border: none;
+  border: 1px solid var(--primary-color-gold);
+  color: #fff;
+  font-size: 20px;
+  background-color: black;
+}
+
+.btnDown {
+  background-color: rgb(78, 78, 78);
+}
+
+.btnWin {
+  color: #000;
+  background-color: var(--primary-color-gold);
+}
+
+.btn:hover {
+  filter: brightness(.8);
+}
+
+.btn:focus {
+  border: none;
+  border: 1px solid var(--primary-color-gold);
+}
+
+.btn:active {
+  filter: brightness(1.5);
+}
+
+.enter , .backspace {
+  width: 50px;
+}
+
+.enter {
+  background-color: var(--primary-color-gold);
+}
+
+.backspace {
+  background-color: #fff;
+}
+
+@media (max-width: 600px) {
+  .btn {
+    width: 40px;
+    height: 40px;
+    margin: 5px 3px;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+}

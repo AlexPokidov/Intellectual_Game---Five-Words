@@ -1,0 +1,19 @@
+.btn {
+  width: 40px;
+  height: 40px;
+  margin-right: 80px;
+  border: none;
+  background: none;
+}
+
+.btn svg g {
+  fill: var(--primary-color-gold);
+}
+
+@media (max-width: 500px) {
+  .btn {
+    width: 25px;
+    height: 25px;
+    margin-right: 30px;
+  }
+}

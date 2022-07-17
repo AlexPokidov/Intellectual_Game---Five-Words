@@ -1,0 +1,53 @@
+.btn {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  border: none;
+  background: none;
+}
+
+.btn svg g {
+  fill: var(--primary-color-gold);
+}
+
+.start svg g {
+  fill: var(--primary-color-green);
+}
+
+.active svg g {
+  fill: var(--primary-color-gold);
+}
+
+@media (max-width: 1200px) {
+  .btn {
+    width: 40px;
+    height: 40px;
+  }
+  .btn svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 800px) {
+  .btn {
+    width: 40px;
+    height: 40px;
+  }
+  .btn svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn {
+    width: 30px;
+    height: 30px;
+  }
+  .btn svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+

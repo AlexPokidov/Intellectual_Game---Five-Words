@@ -1,0 +1,16 @@
+:root {
+  --widthModalError: 250px;
+}
+
+.modal {
+  position: absolute;
+  top: 45%;
+  left: calc(50% - (var(--widthModalError) / 2));
+  width: var(--widthModalError);
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(255, 209, 2);
+  background-color: rgba(139, 0, 0, 0.85);
+}

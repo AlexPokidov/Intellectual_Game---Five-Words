@@ -1,0 +1,97 @@
+.letter {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  /* border: 1px solid var(--primary-color-gold); */
+  color: #000;
+  font-size: 30px;
+  background-color: rgb(145, 145, 145);
+  box-shadow:0px 0px 8px 4px rgba(0,0,0,0.4)inset;
+  -webkit-box-shadow:0px 0px 8px 4px rgba(0,0,0,0.4)inset;
+  -moz-box-shadow:0px 0px 8px 4px rgba(0,0,0,0.4)inset;
+}
+
+.swashIn {
+  animation: .2s ease-in-out swashIn;
+}
+
+.minusLetter {
+  position: absolute;
+  top: 5px;
+  left: -60px;
+  background-color: rgb(155, 0, 0);
+  outline: 1px solid var(--primary-color-gold);
+  opacity: .7;
+}
+
+.letter:not(:last-child) {
+  margin-right: 15px;
+}
+
+.letter_win {
+  color: #000;
+  background-color: var(--primary-color-gold);
+}
+
+.helper {
+  outline: 1px solid var(--primary-color-gold);
+  background-color: rgb(200, 11, 218);
+}
+
+.pfantom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+}
+
+.letter_position {
+  color: #000;
+  background-color: var(--primary-color-green);
+}
+
+@keyframes swashIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(0, 0);
+  }
+  90% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(0.9, 0.9);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+  }
+}
+
+@media (max-width: 600px) {
+  .letter {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 22px;
+  }
+
+  .letter:not(:last-child) {
+    margin-right: 7px;
+  }
+
+  .minusLetter {
+    position: absolute;
+    top: 6px;
+    left: -50px;
+  }
+}

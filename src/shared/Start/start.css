@@ -1,0 +1,162 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.content {
+  position: relative;
+  width: 60%;
+  padding: 15px 30px;
+  color: var(--primary-color-gold);
+  border-radius: 10px;
+  outline: 1px solid var(--primary-color-gold);
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.title {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.descrTitle {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.btnStart {
+  display: block;
+  width: 150px;
+  padding: 10px 20px;
+  margin: 0 auto;
+  border-radius: 8px;
+  color: #000;
+  text-align: center;
+  font-weight: 700;
+  background-color: var(--primary-color-gold);
+  -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.84) inset;
+  -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.84) inset;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.84) inset;
+}
+
+.contBonus {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.resetLink {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 18px;
+  color: var(--primary-color-green);
+}
+
+@media screen and (max-width: 1200px) {
+  .content {
+    width: 90%;
+    height: 80%;
+    font-size: 20px;
+  }
+
+ .title {
+    margin-bottom: 30px;
+    font-size: 38px;
+  }
+
+  .descrTitle {
+    margin-bottom: 15px;
+    font-size: 28px;
+  }
+
+  .resetLink {
+    font-size: 25px;
+  }
+
+  .btnStart {
+    width: 200px;
+    font-size: 22px;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .content {
+    width: 85%;
+  }
+
+  .title {
+    margin-bottom: 15px;
+    font-size: 30px;
+  }
+
+  .descrTitle {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  .resetLink {
+    font-size: 21px;
+  }
+
+  .btnStart {
+    width: 200px;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    width: 95%;
+    height: 92%;
+  }
+
+  .title {
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+
+  .descrTitle {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  .resetLink {
+    font-size: 20px;
+  }
+
+  .btnStart {
+    width: 200px;
+    font-size: 21px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .content {
+    width: 95%;
+    padding: 10px 15px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .descrTitle {
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+
+  .resetLink {
+    font-size: 14px;
+  }
+
+  .btnStart {
+    width: 180px;
+    font-size: 17px;
+  }
+}
+

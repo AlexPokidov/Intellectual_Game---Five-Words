@@ -1,0 +1,112 @@
+:root {
+  --widthDeveloper: 300px;
+}
+
+.displayBlock {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 80px;
+  padding: 15px 50px;
+  color: #fff;
+  background-color: var(--primary-backg-color);
+}
+
+.title {
+  width: 150px;
+  margin-right: 50px;
+  font-size: 40px;
+  animation: 12s linear animTitle infinite;
+}
+
+.containerBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.containerHelper {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: rgb(100, 100, 100);
+}
+
+.developer {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: var(--widthDeveloper);
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--primary-color-gold);
+}
+
+@keyframes animTitle {
+  0% {
+    color: #fff;
+  }
+
+  25% {
+    color: var(--primary-color-gold);
+  }
+
+  50% {
+    color: var(--primary-color-green);
+  }
+
+  75% {
+    color: var(--primary-color-gold);
+  }
+
+  100% {
+    color: #fff;
+  }
+}
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .title {
+    margin-right: 30px;
+    font-size: 25px;
+
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding: 10px 20px;
+  }
+
+  .containerHelper {
+    padding: 5px 5px;
+  }
+
+  .title {
+    width: 50px;
+    margin-right: 20px;
+    font-size: 30px;
+  }
+
+  .developer {
+    bottom: -25px;
+    left: calc(50% - (var(--widthDeveloper) / 2));
+    font-size: 12px;
+    opacity: .6;
+  }
+}

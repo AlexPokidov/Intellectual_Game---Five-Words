@@ -1,0 +1,69 @@
+.container {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100% - 75px);
+  background-color: rgb(46, 68, 4);
+  background-image: url('../../assets/img/backg-word.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: var(--width-modal);
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.title {
+  margin-bottom: 20px;
+  color: var(--primary-color-gold);
+  font-size: 52px;
+}
+
+.text {
+  margin-bottom: 10px;
+  color: var(--primary-color-gold)
+}
+
+.input {
+  display: block;
+  width: 200px;
+  height: 30px;
+  padding: 0 5px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  border: 2px solid var(--primary-color-gold);
+  font-size: 20px;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary-color-gold);
+  -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.84) inset;
+  -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.84) inset;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.84) inset;
+}
+
+@media (max-width: 600px) {
+  .container {
+    height: 100%;
+  }
+}
