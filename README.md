@@ -4,10 +4,23 @@
 ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 	![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)  
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Intellectual+Game+Five+Words)](ссылка)
 - Увлекательная интеллектуальная игра в слова. Попробуйте, вам обязательно понравится).
 - Полностью адаптивное, кроссбраузерное веб-приложение.
+### Контейнер Docker
+Вы сможете развернуть демонстрацию приложения с помощью docker контейнера. Репозиторий в dockerHub, для скачивания образа:
+
+    docker pull alexpokidov/intellectualgamefivewords
+   После локальной загрузки репозитория выполните команду для запуска контейнера Docker:
+   
+
+    docker run -dp 3000:3000 alexpokidov/intellectualgamefivewords
+   После чего необходимо немного подождать пока запустится локальный сервер, приложение будет доступно по адресу:
+   
+
+    http://localhost:3000/
 ## Идея игры
 
 Задача игра разгадать слово из 5 букв за 5 попыток, основываясь лишь на подсказки игры. 
