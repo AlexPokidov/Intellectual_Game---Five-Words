@@ -19,7 +19,7 @@ export function ModalFinish({title, textBtn, onFinish = false, funcOpen, funcRes
   const state = useSelector((state: any) => state);
   const dispatch = useDispatch();
   const funcReset = funcResetGame ? funcResetGame : resetGame;
-  const linkUrl = funcResetGame ? '/' : '/game';
+  const linkUrl = funcResetGame ? 'Intellectual_Game---Five-Words/' : 'Intellectual_Game---Five-Words/game';
   useEffect(() => {
     function handleClick(el: any) {
       const element = document.querySelector(`.${styles.modal}`);

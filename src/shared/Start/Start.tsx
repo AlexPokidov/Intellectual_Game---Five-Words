@@ -98,7 +98,7 @@ export function Start() {
           <BlockStat />
         </div>
 
-        <Link to='/game' className={styles.btnStart}>Начать игру</Link>
+        <Link to='Intellectual_Game---Five-Words/game' className={styles.btnStart}>Начать игру</Link>
 
         <BtnFaq />
 
