@@ -9,6 +9,7 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Intellectual+Game+Five+Words)](ссылка)
 - Увлекательная интеллектуальная игра в слова. Попробуйте, вам обязательно понравится).
 - Полностью адаптивное, кроссбраузерное веб-приложение.
+- Для запуска демонстрации: https://alexpokidov.github.io/Intellectual_Game---Five-Words
 ### Контейнер Docker
 Вы сможете развернуть демонстрацию приложения с помощью docker контейнера. Репозиторий в dockerHub, для скачивания образа:
 
