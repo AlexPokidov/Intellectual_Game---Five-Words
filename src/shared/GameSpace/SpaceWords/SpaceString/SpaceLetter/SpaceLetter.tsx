@@ -6,17 +6,21 @@ interface IPropsLetter {
   itemLetter: string;
   id: string;
   winLet: string;
+  onActive?: boolean;
 }
 
-export function SpaceLetter({itemLetter, id, winLet}: IPropsLetter) {
+export function SpaceLetter({itemLetter, id, winLet, onActive = false}: IPropsLetter) {
   let style = `${styles.letter} `;
 
   const state = useSelector((state: any) => state);
   // if (itemLetter) {
   //   style += ` ${styles.swashIn}`;
   // }
+  if (onActive) {
+    status();
+  }
   function status() {
-    if (state.winWord.includes(itemLetter)) {
+    if (state.winWord.includes(itemLetter) || onActive) {
       style = styles.letter + ' ' + styles.letter_position;
     }
 

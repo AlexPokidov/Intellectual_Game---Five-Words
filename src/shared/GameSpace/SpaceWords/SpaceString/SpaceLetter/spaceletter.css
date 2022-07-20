@@ -1,3 +1,7 @@
+:root {
+  --color-letter-position: var(--primary-color-green);
+}
+
 .letter {
   position: relative;
   display: flex;
@@ -56,7 +60,7 @@
 
 .letter_position {
   color: #000;
-  background-color: var(--primary-color-green);
+  background-color: var(--color-letter-position);
 }
 
 @keyframes swashIn {

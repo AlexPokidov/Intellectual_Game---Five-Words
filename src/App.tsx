@@ -46,6 +46,7 @@ let initState = {
       time: 0,
       word: 'Вы еще не играли',
     },
+    userHelpSpec: true,
   },
   nameUser: '',
   timerValue: {
@@ -58,6 +59,7 @@ let initState = {
   winLetter: [],
   helperBtn: [],
   resetGame: false,
+  openuserHelpSpec: true,
 }
 
 if (local === '/game') {
@@ -133,6 +135,13 @@ const rootReducer: Reducer = (state, action) => {
         ...state,
         statusWin: action.action.statusWin,
       }
+    case 'CHANGE_STATUS_USER_HELP_SPEC':
+      localStorage.setItem(state.nameUser, JSON.stringify(action.userStat));
+      return {
+        ...state,
+        userStat: action.userStat,
+        openuserHelpSpec: action.openuserHelpSpec,
+      }
     case 'CHANGE_STATUS_TOUCH_ENTER':
       return {
         ...state,
@@ -194,6 +203,7 @@ const rootReducer: Reducer = (state, action) => {
             time: 0,
             word: 'Вы еще не играли',
           },
+          userHelpSpec: true,
         },
         nameUser: '',
         timerValue: {
@@ -206,6 +216,7 @@ const rootReducer: Reducer = (state, action) => {
         winLetter: [],
         helperBtn: [],
         resetGame: false,
+        openuserHelpSpec: true,
       }
     default:
       return state
@@ -232,6 +243,7 @@ function App() {
             </div>
           </div>
           }>
+            /*Intellectual_Game---Five-Words */
             <Route path='/Intellectual_Game---Five-Words' element={<Start />}/>
             <Route path='/Intellectual_Game---Five-Words/game' element={<GameSpace />}/>
             <Route path='*' element={<div>

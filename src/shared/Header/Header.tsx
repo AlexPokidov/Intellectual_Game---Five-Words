@@ -41,28 +41,37 @@ export function Header() {
   }
 
   useEffect(() => {
-    console.log(screen)
-    if (screen.height < (screen.width * 0.5)) {
-      document.body.classList.add(`${styles.displayBlock}`)
-      setOnOpenModalErrorOrientation(true)
-    } else {
-      setOnOpenModalErrorOrientation(false);
-    }
-    screen.orientation.onchange = (e) => {
-      if (screen.orientation.type === 'landscape-primary' && screen.height < (screen.width * 0.6)) {
+    function observeOrientation() {
+      let prop = 0.49;
+      const height = screen.height;
+      const width = screen.width;
+      if (width > height && width < 600) {
+        prop = 0.3;
+      } else if (width > height && width > 1800) {
+        prop = 0.6;
+      }
+      const onLandscape = height < (width * prop);
+      if (onLandscape) {
         document.body.classList.add(`${styles.displayBlock}`)
-        setOnOpenModalErrorOrientation(true);
+        setOnOpenModalErrorOrientation(true)
       } else {
-        document.body.classList.remove(`${styles.displayBlock}`)
+        if (document.body.classList.contains(`${styles.displayBlock}`)) {
+          document.body.classList.remove(`${styles.displayBlock}`)
+        }
         setOnOpenModalErrorOrientation(false);
       }
     }
+    console.log(screen)
+    observeOrientation()
+
+    window.addEventListener('resize', observeOrientation);
   })
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>FW</h1>
 
       <Routes>
+        /*/Intellectual_Game---Five-Words */
         <Route path='/Intellectual_Game---Five-Words/game' element={
           <div className={styles.containerBtn}>
             {

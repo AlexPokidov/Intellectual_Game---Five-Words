@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { rating } from '../../hooks/useRating';
+import { ModalError } from '../../ModalError';
 import { ModalFinish } from '../../ModalFinish';
 import { SpaceString } from './SpaceString';
 import styles from './spacewords.css';
@@ -14,6 +15,7 @@ export function SpaceWords() {
   const userWord: string = state.key;
   const stat = statusString > state.stringGame || state.statusWin;
   const [openModalFinish, setOpenModalFinish] = useState(false);
+  const [onModalError, setOnModalError] = useState(false);
   const modalCont = document.querySelector('#modal');
   const [valueFinish, setValueFinish] = useState({
     title: '',
@@ -40,6 +42,12 @@ export function SpaceWords() {
   if (modalCont === null) return null;
 
   useEffect(() => {
+    if (onModalError) {
+      setTimeout(() => {
+        setOnModalError(false)
+      }, 2500);
+    }
+
     if (stat && !openModalFinish && state.timerValue.timerStop === 0) {
       const timeDate = Math.trunc((Number(Date.now()) - Number(state.timerValue.timerStart)) / 1000);
       let level = state.userStat.level;
@@ -86,6 +94,7 @@ export function SpaceWords() {
           level: level,
           saveLevel: level,
           hardWord: objHardWord,
+          userHelpSpec: state.userStat.userHelpSpec,
         };
 
         /*Сохраняем объект в LocalStorage*/
@@ -116,6 +125,7 @@ export function SpaceWords() {
           level: level,
           saveLevel: state.userStat.saveLevel,
           hardWord: state.userStat.hardWord,
+          userHelpSpec: state.userStat.userHelpSpec,
         };
 
         /*Сохраняем объект в LocalStorage*/
@@ -147,6 +157,9 @@ export function SpaceWords() {
     }
 
     function handlerDown(e: any) {
+      if (String(e.key).match(/[a-zA-Z_]/) && String(e.key).length === 1) {
+        setOnModalError(true);
+      }
       localStorage.setItem('saveState', JSON.stringify(state));
       if (String(e.key) === 'Enter' && state.key.length === 5) {
         dispatch({
@@ -216,6 +229,11 @@ export function SpaceWords() {
       }
       {
         openModalFinish && ReactDOM.createPortal(<ModalFinish title={valueFinish.title} textBtn={valueFinish.textBtn} funcOpen={handleCloseModal} />, modalCont)
+      }
+
+      {
+        onModalError &&
+        ReactDOM.createPortal(<ModalError errorKey={true} />, modalCont)
       }
     </div>
   );

@@ -18,9 +18,8 @@ const config = {
         filename: 'main.js'
     },
     devServer: {
-        open: true,
+        open: false,
         host: 'localhost',
-        hot: true,
         historyApiFallback: true,
     },
     plugins: [

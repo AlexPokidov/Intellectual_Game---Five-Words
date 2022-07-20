@@ -49,6 +49,7 @@ export function Start() {
             time: 0,
             word: 'Вы еще не играли',
           },
+          userHelpSpec: true,
         };
 
         localStorage.setItem(name, JSON.stringify(objStat));
@@ -98,7 +99,7 @@ export function Start() {
           <BlockStat />
         </div>
 
-        <Link to='Intellectual_Game---Five-Words/game' className={styles.btnStart}>Начать игру</Link>
+        <Link to='/game' className={styles.btnStart}>Начать игру</Link>
 
         <BtnFaq />
 
