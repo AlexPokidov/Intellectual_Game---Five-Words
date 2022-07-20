@@ -244,8 +244,8 @@ function App() {
           </div>
           }>
             /*Intellectual_Game---Five-Words */
-            <Route path='/Intellectual_Game---Five-Words' element={<Start />}/>
-            <Route path='/Intellectual_Game---Five-Words/game' element={<GameSpace />}/>
+            <Route path='Intellectual_Game---Five-Words' element={<Start />}/>
+            <Route path='Intellectual_Game---Five-Words/game' element={<GameSpace />}/>
             <Route path='*' element={<div>
               Страница не найдена
             </div>} />
