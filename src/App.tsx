@@ -232,7 +232,7 @@ const store = configureStore({
 
 function App() {
   return(
-    <BrowserRouter>
+    <BrowserRouter basename='/Intellectual_Game---Five-Words'>
       <Provider store={store}>
         <Routes>
           <Route path='/' element={
@@ -244,8 +244,8 @@ function App() {
           </div>
           }>
             /*Intellectual_Game---Five-Words */
-            <Route path='Intellectual_Game---Five-Words' element={<Start />}/>
-            <Route path='Intellectual_Game---Five-Words/game' element={<GameSpace />}/>
+            <Route path='/' element={<Start />}/>
+            <Route path='/game' element={<GameSpace />}/>
             <Route path='*' element={<div>
               Страница не найдена
             </div>} />

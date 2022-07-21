@@ -72,7 +72,7 @@ export function Header() {
 
       <Routes>
         /*/Intellectual_Game---Five-Words */
-        <Route path='/Intellectual_Game---Five-Words/game' element={
+        <Route path='/game' element={
           <div className={styles.containerBtn}>
             {
               width > 800 &&
