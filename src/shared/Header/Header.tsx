@@ -45,6 +45,7 @@ export function Header() {
       let prop = 0.49;
       const height = screen.height;
       const width = screen.width;
+      if (width > 1800) return;
       if (width > height && width < 600) {
         prop = 0.3;
       } else if (width > height && width > 1800) {
